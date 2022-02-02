@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WeddinApp3.Models.ViewModels.AppointmentViewModel">
+    <Position X="4" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gACCQAAAEAAiAEAAEAAAAAAgQAAAAAAAAYAAAEAgAAA=</HashCode>
+      <FileName>Models\ViewModels\AppointmentViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ViewModels.CommonResponse&lt;T&gt;">
+    <Position X="6.25" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Models\ViewModels\CommonResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ViewModels.CoupleViewModel">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModels\CoupleViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ViewModels.LoginViewModel">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAgAAA=</HashCode>
+      <FileName>Models\ViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ViewModels.RegisterViewModel">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAACAAAAEAAAIAA=</HashCode>
+      <FileName>Models\ViewModels\RegisterViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ViewModels.SupplierViewModel">
+    <Position X="8" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ViewModels\SupplierViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ApplicationDbContext">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAgAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ApplicationUser">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.Appointment">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACCAAAAEAAiAEAAAAAAAAAgAAAAAAAAAAAAAEAgAAA=</HashCode>
+      <FileName>Models\Appointment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Models.ErrorViewModel">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Services.AppointmentService">
+    <Position X="15" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABhAACAAAAAAAAIgAAAAAAAAGAAAAAAAAAACACAIA=</HashCode>
+      <FileName>Services\AppointmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WeddinApp3.Utility.Helper">
+    <Position X="1" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAASAAABAAAAAIABAAFAAQAEBAAwEgAAAAAAIAAAgAA=</HashCode>
+      <FileName>Utility\Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Program">
+    <Position X="3.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Startup">
+    <Position X="8" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Controllers.AccountController">
+    <Position X="10.25" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAABAAAAgAAABAAAAAAAQAAQAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Controllers.AppointmentController">
+    <Position X="11.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AppointmentController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Controllers.HomeController">
+    <Position X="9.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAIAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.API.AppointmentAPIController">
+    <Position X="10.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAABAABAAAAABAAAAABAAAAEAAAIAAAAQAAAAAAA=</HashCode>
+      <FileName>API\AppointmentAPIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Views.Ratings.RatingController">
+    <Position X="13" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAABAA=</HashCode>
+      <FileName>Controllers\RatingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeddinApp3.Utility.SenderEmail">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Utility\SenderEmail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WeddinApp3.Services.IAppointmentService">
+    <Position X="6" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAACAAAAAAAAIgAAAAAAAAEAAAAAAAAAACACAIA=</HashCode>
+      <FileName>Services\IAppointmentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name=" Segoe UI" Size="9" />
+</ClassDiagram>

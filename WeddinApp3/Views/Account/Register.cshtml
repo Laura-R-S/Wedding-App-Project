@@ -1,0 +1,70 @@
+﻿<!--Defining the model -->
+@model WeddinApp3.Models.ViewModels.RegisterViewModel
+
+<!-- Leveraging Bootstrap to create Register form -->
+<div class="container">
+    <h2>Register</h2>
+    <!--If condition to determine if user is admin - output account info accordingly-->
+    <form method="post" asp-action="Register" asp-controller="Account">
+       @if(User.IsInRole(WeddinApp3.Utility.Helper.Admin)){
+       <h4>Register an Admin Account</h4>
+       }
+       else {
+
+        <h4>Create a new account</h4>
+        }
+        <!-- Validation tag helpers added to alert user -->
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            <label class="col-md-2" asp-for="Name"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-2" asp-for="Email"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-2" asp-for="Password"></label>
+            <div class="col-md-10">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-2" asp-for="ConfirmPassword"></label>
+            <div class="col-md-10">
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+         <!--Select role name from dropdown supplier/couple won't see admin -->
+        <div class="form-group row">
+            <label class="col-md-2" asp-for="RoleName"></label>
+            <div class="col-md-10">
+                <select asp-for="RoleName" asp-items="@WeddinApp3.Utility.Helper.GetRolesForDropDown(User.IsInRole(WeddinApp3.Utility.Helper.Admin))" class="form-control"></select>
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10 offset-md-2">
+                <input type="submit" value="Register" class="btn btn-success" />
+            </div>
+        </div>
+        <p class="col-md-10 offset-md-2">
+            <a asp-action="Login">Sign In</a>
+        </p>
+    </form>
+</div>
+
+@section scripts{ 
+<!--Utilising validation jQuery scripts in shared folder -->
+<partial name="_ValidationScriptsPartial" />
+
+}

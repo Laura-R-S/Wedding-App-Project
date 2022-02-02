@@ -1,0 +1,32 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<WeddinApp3.Models.ApplicationUser> signInManager
+@if (signInManager.IsSignedIn(User))
+{
+
+    <form method="post" id="logoutForm" asp-action="LogOff" asp-controller="Account" >
+  
+        <ul class="nav justify-content-end inline flex-nowrap">
+            <li class="text-black-100 userText">Hello, @User.Identity.Name! &nbsp;</li>
+            <li><a class="text-black-100 nav-link btn btn-outline-secondary pad-left-x1 wsNoWrap" href="javascript:document.getElementById('logoutForm').submit()">Log Off</a></li>
+        </ul>
+    </form>
+               <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+    }
+    else
+    {
+        <!-- Navigation buttons for login/register/survey-->
+        <ul class="nav justify-content-end">
+            <li>
+                <a class="btn btn-outline-secondary text-black-100 pad-left-x1" id="loginLink" asp-controller="Account" asp-action="Login">Sign In &nbsp;</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-secondary text-black-100 pad-left-x1" id="registerLink" asp-controller="Account" asp-action="Register">Register</a>
+            </li>
+        </ul>
+        }
+    

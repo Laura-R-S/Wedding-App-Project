@@ -1,0 +1,41 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<WeddinApp3.Models.ApplicationUser> signInManager
+<div class="row">
+	<div class="container">
+		 <h4 class="mb-3">Click a date in the calendar to view supplier list and make a booking  </h4>
+		<!--If condition to determine if admin logged in
+		admin user will see suplpier dropdown list-->
+		@if (User.IsInRole(WeddinApp3.Utility.Helper.Admin))
+		{
+			<div classs="row">
+				<div class="form-group col-4" id="divSupplierList">
+					<label> Select Supplier</label>
+
+					@Html.DropDownList("supplierId", new SelectList(ViewBag.SupplierList, "Id", "Name"), new {
+					@class = "form-control select2",
+					@onchange= "onSupplierChange();"
+		})
+	 </div>
+	   <div class="col-3 offset-10">
+			<a asp-controller="Account" asp-action="Register" class="btn btn-outline-secondary pad-left-x1 form-control">Admin Registration &nbsp;</a>
+		@if (signInManager.IsSignedIn(User))
+		{
+			<ul class=nav justify-content-end>
+
+		@if (User.IsInRole(WeddinApp3.Utility.Helper.Couple))
+		{
+				<li class="nav-item">
+					<a class="btn btn-outline-secondary text-black-100 pad-left-x1" id="registerLink" asp-controller="Rating" asp-action="Index"> Survey</a>
+				</li>
+		}
+			</ul>
+	}
+	   </div>
+	  </div>
+		}
+  <div id="calendar"></div>
+ </div>
+</div>
+
+<!--Utilising add/edit partial view modal view  -->
+
+<partial name="_AddEditAppt" />

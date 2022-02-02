@@ -1,0 +1,128 @@
+﻿<!--defining model to use in rating index--->
+@model WeddinApp3.Models.ViewModels.SurveyViewModel
+
+<div class="container">
+	<section>
+		<div class="col-md-12 order-md-1">
+			<h4 class="mb-3">Please take a moment to fill out the survey below:  </h4>
+
+            <!--Retrieving user input  from ratings form -->
+			<form method="post" asp-action="AddRatings">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm">
+                        <div>
+                            <label for="Venue1">
+                                <img class="w-100 circle" src="/images/hotels/1.jpg" />
+                            </label>
+                        </div>
+                        <div class="form-check text-center pad-text">
+                            <select class="form-select" asp-for="Venue1">
+                                <option value="1">I hate it</option>
+                                <option value="2">I don't like it</option>
+                                <option selected value="3">It's ok</option>
+                                <option value="4">It's nice</option>
+                                <option value="5">I love it</option>
+                            </select>
+                            <!--<input class="form-check-input" type="checkbox" asp-for="Venue1" value=true id="Venue1">
+                            <label class="form-check-label" for="Venue1" asp-for="Venue1">
+                                I like it!
+                            </label>-->
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div>
+                            <label for="Venue2">
+                                <img class="w-100 circle" src="/images/hotels/2.jpg" />
+                            </label>
+                        </div>
+                        <div class="form-check text-center pad-text">
+                            <select class="form-select" asp-for="Venue2">
+                                <option value="1">I hate it</option>
+                                <option value="2">I don't like it</option>
+                                <option selected value="3">It's ok</option>
+                                <option value="4">It's nice</option>
+                                <option value="5">I love it</option>
+                            </select>
+                            <!--<input class="form-check-input" type="checkbox" asp-for="Venue2" value=true id="Venue2">
+                            <label class="form-check-label" for="Venue2" asp-for="Venue2">
+                                I like it!
+                            </label>-->
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div>
+                            <label for="Venue3">
+                                <img class="w-100 circle" src="/images/hotels/3.jpg" />
+                            </label>
+                        </div>
+                        <div class="form-check text-center pad-text">
+                            <select class="form-select" asp-for="Venue3">
+                                <option value="1">I hate it</option>
+                                <option value="2">I don't like it</option>
+                                <option selected value="3">It's ok</option>
+                                <option value="4">It's nice</option>
+                                <option value="5">I love it</option>
+                            </select>
+                            <!--<input class="form-check-input" type="checkbox" asp-for="Venue3" value=true id="Venue3">
+                            <label class="form-check-label" for="Venue3" asp-for="Venue3">
+                                I like it!
+                            </label>-->
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div>
+                            <label for="Venue4">
+                                <img class="w-100 circle" src="/images/hotels/4.jpg" />
+                            </label>
+                        </div>
+                        <div class="form-check text-center pad-text">
+                            <select class="form-select" asp-for="Venue4">
+                                <option value="1">I hate it</option>
+                                <option value="2">I don't like it</option>
+                                <option selected value="3">It's ok</option>
+                                <option value="4">It's nice</option>
+                                <option value="5">I love it</option>
+                            </select>
+                            <!--<input class="form-check-input" type="checkbox" asp-for="Venue4" value=true id="Venue4">
+                            <label class="form-check-label" for="Venue4" asp-for="Venue4">
+                                I like it!
+                            </label>-->
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div>
+                            <label for="Venue5">
+                                <img class="w-100 circle" src="/images/hotels/5.jpg" />
+                            </label>
+                        </div>
+                        <div class="form-check text-center pad-text">
+                            <select class="form-select" asp-for="Venue5">
+                                <option value="1">I hate it</option>
+                                <option value="2">I don't like it</option>
+                                <option selected value="3">It's ok</option>
+                                <option value="4">It's nice</option>
+                                <option value="5">I love it</option>
+                            </select>
+                            <!--<input class="form-check-input" type="checkbox" asp-for="Venue5" value=true id="Venue5">
+                            <label class="form-check-label" for="Venue5" asp-for="Venue5">
+                                I like it!
+                            </label>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+				<hr class="mb-4">
+                <div class="container text-center">
+				    <input class="btn btn-outline-secondary pad-x1" type="submit">
+				    <a class="btn btn-outline-secondary pad-left-x1" asp-controller="Account" asp-action="Login">Back </a>
+                </div>
+
+			</Form>
+
+		</div>
+	</section>
+</div>
+

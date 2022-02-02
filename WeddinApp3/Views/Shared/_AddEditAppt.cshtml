@@ -1,0 +1,103 @@
+﻿ <!--pop up modal add/edit partial view -->
+<div class="modal fade" role="dialog" id="apptInput" date-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="appointmentform" autocomplete="off" novalidate="novalidate">
+				<div class="modal-header">
+					<!--admin header differs from couple/supplier header -->
+					@if (User.IsInRole(WeddinApp3.Utility.Helper.Admin))
+					{
+
+							<h4 class="modal-title">Add/Edit Booking</h4>
+					}
+					else
+					{
+							<h4 class="modal-title">Booking Details</h4>
+					}
+				</div>
+	<div class="modal-body">
+		<div class="form-group">
+			<label for="title">Title</label>
+			<input type="text" maxlength="100" class="form-control" id="title" />
+	</div>
+	<div class="form-group">
+			<label for="description">Description</label>
+			<textarea type="text" class="form-control" id="description"></textarea>
+	</div>
+	 <!--only admin/couple can select venue/suppleir to book -->
+					@if (!User.IsInRole(WeddinApp3.Utility.Helper.Supplier))
+					{
+			<div class="form-group">
+				<label for="title">Select Venue</label>
+				<select id="supplierId" asp-items="@(new SelectList(ViewBag.SupplierList, "Id", "Name"))" class="form-control"></select>
+			</div>
+					}
+	 <!--only admin can see couple list -->
+					@if (User.IsInRole(WeddinApp3.Utility.Helper.Admin))
+					{
+			<div class="form-group">
+					<label for="title">Select Couple</label>
+					<select id="coupleId" asp-items="@(new SelectList(ViewBag.CoupleList, "Id", "Name"))" class="form-control"></select>
+			</div>
+					}
+					else
+					{
+						// suppplier can see if booking pending or confirmed
+						@if (User.IsInRole(WeddinApp3.Utility.Helper.Supplier))
+						{
+				<div class="form-group">
+					<label for="lblCoupleName">Couple Name</label>
+					<label class="form-control" disabled id="lblCoupleName" />
+				</div>
+				<div class="form-group">
+					<label for="lblStatus">Status</label>
+					<label class="form-control" disabled id="lblStatus" />
+			 </div>
+						}
+						// couple can see if booking pending or confirmed
+						@if (User.IsInRole(WeddinApp3.Utility.Helper.Couple))
+						{
+				<div class="form-group">
+					<Text><strong>Status and Name will appear after booking is made</strong></Text>
+					<label for="lblSupplierName">Supplier Name</label>
+					<label class="form-control" disabled id="lblSupplierName" />
+				</div>
+				<div class="form-group">
+					<label for="lblStatus">Status</label>
+					<label class="form-control" disabled id="lblStatus" />
+				</div>
+						}
+					}
+			<div class="form-group">
+				<label for="appointmentDate">Wedding Date & time; </label>
+				<input class="form-control appointmentDateAndTime" id="appointmentDate" />
+			</div>
+			<div class="form-group">
+				<label for="title">Duration</label>
+					<select id="duration" asp-items="ViewBag.Duration" class="form-control"></select>
+			</div>
+					<input type="hidden" id="id" />
+		</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" onclick="onCloseModal();">Close</button> &nbsp;
+
+					@if (!User.IsInRole(WeddinApp3.Utility.Helper.Supplier))
+
+					{
+						<button type="button" id="btnSubmit" class="btn btn-success" onclick="onSubmitForm();">Submit</button>
+						<button type="button" id="btnDelete" class="btn btn-danger d-none" onclick="onDeleteAppointment();">Delete</button>
+					}
+
+
+					@if (User.IsInRole(WeddinApp3.Utility.Helper.Supplier))
+
+					{
+						<button type="button" id="btnConfirm" class="btn btn-success" onclick="onConfirm();">Confirm</button>
+						<button type="button" id="btnDelete" class="btn btn-danger d-none" onclick="onDeleteAppointment();">Delete</button>
+					}
+
+	</div>
+   </form>
+  </div>
+ </div>
+</div>

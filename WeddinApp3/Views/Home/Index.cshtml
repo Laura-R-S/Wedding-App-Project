@@ -1,0 +1,36 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<WeddinApp3.Models.ApplicationUser> signInManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+  <div class="container">
+               @if (signInManager.IsSignedIn(User))
+        {
+            <div class="col-6 offset-6 navLinks">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a  asp-controller="Appointment" asp-action="Index">Booking</a>
+                            &nbsp
+                        </li>
+                        @if (User.IsInRole(WeddinApp3.Utility.Helper.Couple)){
+                        <li>
+                            |&nbsp
+                            <a  asp-controller="Rating" asp-action="Index"> Wedding Survey</a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+        }
+            </div>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="header-img"></div>
+    <div class="heart-img"></div>
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-3 font-weight-normal logo-font">Say i DO</h1>
+        <p class="lead font-weight-normal">Take the stress out of organising your wedding</p>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
